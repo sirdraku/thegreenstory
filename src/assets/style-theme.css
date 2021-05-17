@@ -382,6 +382,12 @@ ul.heateor_sss_sharing_ul {
   display: none;
 }
 
-.single .featured-media:before{
+.singular .featured-media:before{
   display: none;
+}
+.singular .intro-text{
+  display: none;
+}
+.singular .entry-header{
+  padding: 0;
 }
