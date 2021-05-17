@@ -381,3 +381,7 @@ a.to-the-top:hover{
 ul.heateor_sss_sharing_ul {
   display: none;
 }
+
+.single .featured-media:before{
+  display: none;
+}
