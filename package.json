@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-cuteanimalplanet-wordpress",
+  "description": "Gatsby port of the WordPress cuteanimalplanet theme.",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "version": "0.0.1",
+  "author": {
+    "name": "developershagor",
+    "email": "shagora63@gmail.com"
+  },
+  "scripts": {
+    "develop": "GATSBY_CONCURRENT_DOWNLOAD=5 gatsby build",
+    "clean": "gatsby clean",
+    "build": "gatsby build",
+    "cdev": "gatsby clean && gatsby develop",
+    "cbuild": "gatsby clean && gatsby build",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "gatsby": "^3.3.1",
+    "gatsby-plugin-image": "^1.3.1",
+    "gatsby-plugin-notifications": "^0.0.2",
+    "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-sharp": "^3.3.1",
+    "gatsby-plugin-social9-socialshare": "^1.0.5",
+    "gatsby-source-filesystem": "^3.3.0",
+    "gatsby-source-wordpress": "^5.3.1",
+    "gatsby-transformer-sharp": "^3.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
