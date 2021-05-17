@@ -5,7 +5,7 @@ import UniversalLink from "./UniversalLink"
 const FooterNav = () => {
   const { wpMenu } = useStaticQuery(graphql`
     {
-      wpMenu(slug: { eq: "footer" }) {
+      wpMenu(slug: { eq: "footerMenu" }) {
         name
         menuItems {
           nodes {
