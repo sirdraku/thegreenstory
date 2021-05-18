@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import RecentPost from "./RecentPost"
-
 import FooterMenusWidgets from "./FooterMenusWidgets"
-
 import MenuModal from "./MenuModal"
+import favicon from "../assets/images/favicon.png"
+import Helmet from 'react-helmet'
 
 const backdropClasses = " backdrop"
 
@@ -34,6 +34,10 @@ const Layout = ({ children, bodyClass }) => {
         (backdropActive ? backdropClasses : "")
       }
     >
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
+      
       <Header toggleBackdrop={toggleBackdrop} />
 
       <MenuModal isActive={backdropActive} toggleBackdrop={toggleBackdrop} />
