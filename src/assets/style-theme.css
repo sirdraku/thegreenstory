@@ -391,7 +391,7 @@ ul.heateor_sss_sharing_ul {
 .singular .entry-header{
   padding: 0;
 }
-.singular article.featured-media {
+.singular article .featured-media {
   text-align: center;
   display: none;
 }
