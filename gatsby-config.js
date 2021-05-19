@@ -104,9 +104,11 @@ module.exports = {
       options: {
         content:  "f03c29e9abd146f1885badf34342bbd9",
         async: true,
-        defer: true
+        defer: true,
+        src: "//cdn.social9.com/js/socialshare.min.js"
       }
     },
+
    
     `gatsby-transformer-sharp`,
     {
