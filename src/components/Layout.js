@@ -6,7 +6,6 @@ import FooterMenusWidgets from "./FooterMenusWidgets"
 import MenuModal from "./MenuModal"
 import favicon from "../assets/images/favicon.png"
 import Helmet from 'react-helmet'
-import AdSense from 'react-adsense';
 
 const backdropClasses = " backdrop"
 
@@ -34,13 +33,8 @@ const Layout = ({ children, bodyClass }) => {
     >
       <Helmet>
         <link rel="icon" href={favicon} />
-          <AdSense.Google
-              client='ca-pub-1874224645972548'
-              slot='6866014183'
-              style={{ display: 'block' }}
-              layout='in-article'
-              format='fluid'
-          />
+        <script data-ad-client="ca-pub-1874224645972548" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <meta name="tag" content="html, react "/>
       </Helmet>
       
       <Header toggleBackdrop={toggleBackdrop} />
@@ -58,13 +52,6 @@ const Layout = ({ children, bodyClass }) => {
               </div>
               <div className="widget">
                 <RecentPost />
-                <AdSense.Google
-                  client='ca-pub-1874224645972548'
-                  slot='6866014183'
-                  style={{ display: 'block' }}
-                  layout='in-article'
-                  format='fluid'
-              />
               </div>
             </div>
         </div>
