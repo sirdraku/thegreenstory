@@ -35,8 +35,6 @@ const post = ({ data }) => {
          <FeaturedMedia image={featuredImage} />
          
             
-       
-       
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
             <PostCategories categories={categories} />
@@ -45,6 +43,7 @@ const post = ({ data }) => {
               dangerouslySetInnerHTML={{ __html: title }}
             />
              <PostMeta title={title} author={author} date={date} />
+             <div class="s9-widget-wrapper"></div>
             <div
               className="intro-text section-inner max-percentage small"
               dangerouslySetInnerHTML={{ __html: excerpt }}
@@ -63,6 +62,7 @@ const post = ({ data }) => {
         
         <div className="section-inner">
           <AuthorBio author={author} />
+          <div class="s9-widget-wrapper"></div>
           <ContentTypePagination
             previousPage={previousPage}
             nextPage={nextPage}
