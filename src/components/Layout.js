@@ -33,7 +33,6 @@ const Layout = ({ children, bodyClass }) => {
     >
       <Helmet>
         <link rel="icon" href={favicon} />
-        <script data-ad-client="ca-pub-1874224645972548" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <meta name="tag" content="html, react "/>
       </Helmet>
       
