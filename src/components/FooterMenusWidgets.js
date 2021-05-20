@@ -1,5 +1,4 @@
 import React from "react"
-import SocialMenu from "./SocialMenu"
 import RecentPost from "./RecentPost"
 
 const FooterMenusWidgets = ({}) => {
