@@ -44,6 +44,10 @@ const post = ({ data }) => {
             
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
+            
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={content}/>
+            
             <PostCategories categories={categories} />
             <h1
               className="entry-title"
