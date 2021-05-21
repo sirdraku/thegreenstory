@@ -38,15 +38,18 @@ const post = ({ data }) => {
          <Helmet>
           <title>{title}</title>
           <meta property="og:title" content={title} />
-          <meta property="og:description" content={content}/>
-         
         </Helmet>
+        
+        <Helmet
+          title={title}
+          titleTemplate={`%s · ${site.siteMetadata.title}`}
+          defaultTitle={site.siteMetadata.title}
+        />
             
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
             
             <meta property="og:title" content={title} />
-            <meta property="og:description" content={content}/>
             
             <PostCategories categories={categories} />
             <h1

@@ -12,12 +12,13 @@ const page = ({ data }) => {
     <Layout
       bodyClass={`page-template-default page page-id-${databaseId} wp-embed-responsive singular missing-post-thumbnail has-no-pagination not-showing-comments footer-top-visible customize-support`}
     >
-      <Seo title={title} description={excerpt} />
-
+     
       <article
         className={`post-${databaseId} post page type-page status-publish hentry`}
         id={`post-${databaseId}`}
       >
+        <Seo title={title} description={excerpt} />
+
         <FeaturedMedia image={featuredImage} />
         
         <header className="entry-header">
