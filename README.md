@@ -1,10 +1,10 @@
-# Gatsby Starter - WordPress cuteanimalplanet
+# Gatsby - WordPress Cuteanimalplanet
 
 A port of the WordPress cuteanimalplanet theme to Gatsby. 
 
 ---
 
-This starter uses **Gatsby V3** and the new `gatsby-source-wordpress@v5`. You can find documentation for that package [here](https://www.gatsbyjs.com/plugins/gatsby-source-wordpress/).
+This Gatsby Theme uses **Gatsby V3** and the new `gatsby-source-wordpress@v5`. You can find documentation for that package [here](https://www.gatsbyjs.com/plugins/gatsby-source-wordpress/).
 
 Checkout some options of the source plugin: [plugin-options.md](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/plugin-options.md)
 
@@ -39,10 +39,3 @@ Last tested with the following plugin versions.
 
 - [gatsby-source-wordpress (v5)](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/README.md)
 - [WPGatsby - WordPress Plugin](https://github.com/gatsbyjs/wp-gatsby)
-
-## Acknowledgements
-
-- [NeverNull GmbH](https://nevernull.io) - The team I'm working with. Checkout what we are building here: [mobileui.dev](https://mobileui.dev)
-- [@TylerBarnes](https://github.com/TylerBarnes) - Head developer of gatsby-source-wordpress@v4
-- [@JasonBahl](https://github.com/jasonbahl) - Head developer of WPGraphQL
-- [@LouieChristie](https://github.com/louiechristie) - Open source contributor

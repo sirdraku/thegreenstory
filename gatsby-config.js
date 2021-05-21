@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress cuteanimalplanet`,
     description: `Gatsby cuteanimalplanet site for cuteanimalplanet Gatsby Theme.`,
-    author: `@henrikwirth`,
+    author: `@developershagor`,
   },
   plugins: [
     `gatsby-plugin-image`,

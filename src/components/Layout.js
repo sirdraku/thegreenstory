@@ -33,7 +33,6 @@ const Layout = ({ children, bodyClass }) => {
     >
       <Helmet>
         <link rel="icon" type="image/x-icon" href={favicon} />
-        <meta name="tag" content="html, react "/>
       </Helmet>
       
       <Header toggleBackdrop={toggleBackdrop} />

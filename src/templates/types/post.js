@@ -27,7 +27,7 @@ const post = ({ data }) => {
     <Layout
       bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
     >
-      <Seo title={title} description={excerpt} />
+      <Seo title={title} description={content} />
 
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
@@ -38,8 +38,8 @@ const post = ({ data }) => {
          <Helmet>
           <title>{title}</title>
           <meta property="og:title" content={title} />
-          <meta property="og:description" content={excerpt}/>
-          <description>{excerpt}</description>
+          <meta property="og:description" content={content}/>
+         
         </Helmet>
             
         <header className="entry-header header-footer-group">
