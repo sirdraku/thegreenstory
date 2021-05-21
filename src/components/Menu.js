@@ -37,50 +37,42 @@ const Menu = () => {
   const [isActive, setActive] = useState(true);
   
   if (!wpMenu?.menuItems?.nodes || wpMenu.menuItems.nodes === 0) return null
-
   return (
     
     <nav className={isActive ? "inactive" : "active"} >
       <ul className="primary-menu reset-list-style">
-        {wpMenu.menuItems.nodes.map((menuItem, i) => {
+        {wpMenu?.menuItems?.nodes?.map((menuItem, i) => {
           const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
-
-          const itemId = "menu-item-" + menuItem.databaseId
-
+          const itemId = "menu-item-" + menuItem?.databaseId
           return (
-            <li
-              id={itemId}
-              key={i + menuItem.url}
-              className={
-                "menu-item menu-item-type-custom menu-item-object-custom menu-item-home " +
-                itemId
-              }
-            >
-
-              <UniversalLink
-                to={path}
-                activeClassName={"current-menu-item current_page_item"}
+            menuItem?.childItems?.nodes?.length > 0 && (
+                <li
+                id={itemId}
+                key={i + menuItem?.url}
+                className={
+                  "menu-item menu-item-type-custom menu-item-object-custom menu-item-home " +
+                  itemId
+                }
               >
-                {menuItem.label}
-              </UniversalLink>
-
-              {menuItem.childItems.nodes.length > 0 &&
+                <UniversalLink
+                  to={path}
+                  activeClassName={"current-menu-item current_page_item"}
+                >
+                  {menuItem.label}
+                </UniversalLink>
                 <ul className="submenu">
-                    { menuItem.childItems.nodes.map((childItem, ci) => 
-                    
-                    <li key={ci}> 
+                {menuItem?.childItems?.nodes?.map((item, index) => (
+                    <li key={index}> 
                       <UniversalLink
-                          to={childItem.url}
-                        >
-                           {childItem.label}
-                           
-                        </UniversalLink>
-                     </li>
-                    
-                    )}
-                </ul> 
-              }
-            </li>
+                        to={item?.url}
+                      >
+                        {item?.label}
+                      </UniversalLink>
+                    </li>
+                  ))}
+                  </ul> 
+              </li>
+            )
           )
         })}
       </ul>

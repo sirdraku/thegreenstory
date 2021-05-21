@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import Comments from "../../components/Comments"
@@ -33,7 +34,13 @@ const post = ({ data }) => {
         id={`post-${databaseId}`}
       >
          <FeaturedMedia image={featuredImage} />
-         
+
+         <Helmet>
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={excerpt}/>
+          <description>{excerpt}</description>
+        </Helmet>
             
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">

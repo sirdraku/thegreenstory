@@ -32,7 +32,7 @@ const Layout = ({ children, bodyClass }) => {
       }
     >
       <Helmet>
-        <link rel="icon" href={favicon} />
+        <link rel="icon" type="image/x-icon" href={favicon} />
         <meta name="tag" content="html, react "/>
       </Helmet>
       
