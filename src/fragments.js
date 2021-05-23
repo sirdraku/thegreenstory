@@ -51,6 +51,7 @@ export const fragments = graphql`
   }
 
   fragment PostContent on WpPost {
+    uri
     title
     content
     date(formatString: "LL")
@@ -90,6 +91,7 @@ export const fragments = graphql`
   }
 
   fragment PageContent on WpPage {
+    uri
     title
     content
     databaseId

@@ -1590,7 +1590,9 @@ ul.primary-menu {
   font-weight: 600;
 }
 
-.primary-menu li:hover .submenu{
+.primary-menu li .submenu li .submenu {
+  left: 100%;
+  top: 0;
   opacity: 1;
 }
 

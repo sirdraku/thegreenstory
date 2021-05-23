@@ -1,31 +1,30 @@
 import React, { useState }  from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "./UniversalLink"
-import { func } from "prop-types"
-
 
 
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
     {
       wpMenu(slug: { eq: "primary" }) {
-        name
         menuItems {
           nodes {
+            parentId
             label
+            path
             url
-            databaseId
-            connectedNode {
-              node {
-                ... on WpContentNode {
-                  uri
-                }
-              }
-            }
             childItems {
               nodes {
+                path
                 label
                 url
+                childItems {
+                  nodes {
+                    path
+                    label
+                    url
+                  }
+                }
               }
             }
           }
@@ -45,7 +44,8 @@ const Menu = () => {
           const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
           const itemId = "menu-item-" + menuItem?.databaseId
           return (
-            menuItem?.childItems?.nodes?.length > 0 && (
+            <React.Fragment key={i}>
+            {menuItem?.parentId === null && (
                 <li
                 id={itemId}
                 key={i + menuItem?.url}
@@ -60,6 +60,8 @@ const Menu = () => {
                 >
                   {menuItem.label}
                 </UniversalLink>
+                {/* {console.log(menuItem?.childItems?.nodes.length > 0 && menuItem?.childItems?.nodes)} */}
+                {menuItem?.childItems?.nodes?.length > 0 &&
                 <ul className="submenu">
                 {menuItem?.childItems?.nodes?.map((item, index) => (
                     <li key={index}> 
@@ -68,11 +70,26 @@ const Menu = () => {
                       >
                         {item?.label}
                       </UniversalLink>
+                      {item?.childItems?.nodes?.length > 0 && 
+                        <ul className="submenu">
+                          {item?.childItems?.nodes?.map((data, index) => (
+                            <li key={index}> 
+                              <UniversalLink
+                              to={data?.url}
+                              >
+                              {data?.label}
+                            </UniversalLink>
+                          </li>
+                          ))}
+                        </ul>
+                      }
                     </li>
                   ))}
                   </ul> 
+                }
               </li>
-            )
+            )}
+            </React.Fragment>
           )
         })}
       </ul>
