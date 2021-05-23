@@ -23,15 +23,13 @@
     "gatsby-plugin-notifications": "^0.0.2",
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sharp": "^3.3.1",
-    "gatsby-plugin-social9-socialshare": "^1.0.5",
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-source-wordpress": "^5.3.1",
     "gatsby-transformer-sharp": "^3.3.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-share": "^4.4.0"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "prettier": "^2.2.1"

@@ -71,7 +71,7 @@ article .entry-title{
 }
 
 .content-left article.post {
-  width: 45%;
+  width: 50%;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 30px;
@@ -393,5 +393,5 @@ ul.heateor_sss_sharing_ul {
 }
 .singular article .featured-media {
   text-align: center;
-  display: none;
+  margin-bottom: 20px;
 }

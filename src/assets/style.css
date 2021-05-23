@@ -1577,6 +1577,7 @@ ul.primary-menu {
   box-shadow: rgb(0 0 0 / 15%) 0 7px 25px;
   background: #fff;
   padding: 13px 0;
+  display: none;
 }
 .primary-menu li .submenu li{
   padding: 0;
@@ -1593,7 +1594,6 @@ ul.primary-menu {
 .primary-menu li .submenu li .submenu {
   left: 100%;
   top: 0;
-  opacity: 1;
 }
 
 .primary-menu ul a {
@@ -1615,7 +1615,10 @@ ul.primary-menu {
   right: 1.5rem;
   top: calc(50% - 0.5rem);
 }
-
+.primary-menu > li:hover .submenu{
+  display: block;
+  opacity: 1;
+}
 /* DEEP DOWN */
 
 .primary-menu ul ul {
