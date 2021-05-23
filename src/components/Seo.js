@@ -34,10 +34,10 @@ function Seo({ description, lang, meta, keywords, title }) {
                 property: `og:title`,
                 content: title,
               },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
+              // {
+              //   property: `og:description`,
+              //   content: metaDescription,
+              // },
               {
                 property: `og:type`,
                 content: `website`,
@@ -54,10 +54,10 @@ function Seo({ description, lang, meta, keywords, title }) {
                 name: `twitter:title`,
                 content: title,
               },
-              {
-                name: `twitter:description`,
-                content: metaDescription,
-              },
+              // {
+              //   name: `twitter:description`,
+              //   content: metaDescription,
+              // },
             ]
               .concat(
                 keywords.length > 0
