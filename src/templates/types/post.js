@@ -32,14 +32,14 @@ const post = ({ data }) => {
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
-        <PostCategories categories={categories} />
-
-         <FeaturedMedia image={featuredImage} />
-         
+        
+        <FeaturedMedia image={featuredImage} />
             
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
-            
+
+            <PostCategories categories={categories} />
+
             <h1
               className="entry-title"
               dangerouslySetInnerHTML={{ __html: title }}
