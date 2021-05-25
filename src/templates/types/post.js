@@ -46,9 +46,7 @@ const post = ({ data }) => {
             />
              <PostMeta title={title} author={author} date={date} />
 
-             <div className="sharethis-inline-share-buttons"></div>
-             
-             <div class="sharethis-inline-share-buttons"></div>
+             <div className="s9-widget-wrapper"></div>
 
 
             <div
@@ -69,7 +67,7 @@ const post = ({ data }) => {
         
         <div className="section-inner">
           <AuthorBio author={author} />
-          <div className="s9-widget-wrapper" />
+          <div className="s9-widget-wrapper"></div>
           <ContentTypePagination
             previousPage={previousPage}
             nextPage={nextPage}
