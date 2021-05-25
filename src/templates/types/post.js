@@ -8,6 +8,7 @@ import AuthorBio from "../../components/AuthorBio"
 import PostMeta from "../../components/PostMeta"
 import PostCategories from "../../components/PostCategories"
 import FeaturedMedia from "../../components/FeaturedMedia"
+import { Helmet } from "react-helmet"
 
 const post = ({ data }) => {
   const { nextPage, previousPage, page } = data
@@ -22,11 +23,26 @@ const post = ({ data }) => {
     date,
     uri
   } = page  
+  let clearExerpt = excerpt.replace(/<\/?[^>]+(>|$)/g, "");
+  if(clearExerpt.length > 10) {
+    clearExerpt = clearExerpt.substring(0,80)
+  }
+  let clearTitle = title.replace(/<\/?[^>]+(>|$)/g, "");
+  if(clearExerpt.length > 10) {
+    clearTitle = clearTitle.substring(0,30)
+  }
+  let makeTitleArr = clearTitle.split(" ");
+  let addTitleSuffix = [...makeTitleArr, "..."];
+
+
+  let makeExerptArr = clearExerpt.split(" ");
+  let addExerptSuffix = [...makeExerptArr, "..."];
+
   return (
     <Layout
     bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
     >
-      <Seo title={title} />
+      <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
@@ -48,7 +64,9 @@ const post = ({ data }) => {
 
              <div className="s9-widget-wrapper"></div>
 
-
+            <Helmet>
+              <meta content="" />
+            </Helmet>
             <div
               className="intro-text section-inner max-percentage small"
               dangerouslySetInnerHTML={{ __html: excerpt }}

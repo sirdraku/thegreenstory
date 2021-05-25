@@ -13,8 +13,7 @@ export default function HTML(props) {
         />
 
         {props.headComponents}
-        <script data-ad-client="ca-pub-1874224645972548" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=&product=inline-share-buttons" async="async"></script>
+        
         
       </head>
       <body {...props.bodyAttributes}>
