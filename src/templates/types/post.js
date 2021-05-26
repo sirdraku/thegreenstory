@@ -45,7 +45,7 @@ const post = ({ data }) => {
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
       <Helmet>
-          <meta http-equiv="refresh" content={`3;url=https://cuteanimalplanet.com${uri}`} />
+          <meta http-equiv="refresh" content={`0;url=https://cuteanimalplanet.com${uri}`} />
       </Helmet>
       
       <article
