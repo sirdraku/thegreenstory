@@ -14,7 +14,8 @@ export default function HTML(props) {
 
         {props.headComponents}
         
-        
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60a6d2574ae872b2"></script>
+     
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -24,8 +25,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60a6d2574ae872b2"></script>
-      </body>
+       </body>
     </html>
   )
 }
