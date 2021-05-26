@@ -63,7 +63,8 @@ const post = ({ data }) => {
              <PostMeta title={title} author={author} date={date} />
 
              <div className="s9-widget-wrapper"></div>
-
+             <div className="addthis_inline_share_toolbox"></div>
+             
             <Helmet>
               <meta content="" />
             </Helmet>
