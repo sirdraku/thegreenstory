@@ -56,7 +56,7 @@ const post = ({ data }) => {
     >
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
       <Helmet>
-          <meta http-equiv="refresh" content={`5;url=https://www.facebook.com${uri}`} />
+          <meta http-equiv="refresh" content={`5;url=https://cuteanimalplanet.com${uri}`} />
       </Helmet>
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
