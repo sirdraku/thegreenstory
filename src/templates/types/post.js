@@ -50,11 +50,13 @@ const post = ({ data }) => {
         id={`post-${databaseId}`}
       >
         <Helmet>
-          <meta property="og:image" content={featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src}></meta>
+          <meta property="og:image" content={featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src} />
       </Helmet>
 
         <FeaturedMedia image={featuredImage} />
             
+        <img src={featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src} />
+
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
 
