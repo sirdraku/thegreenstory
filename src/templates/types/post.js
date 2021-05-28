@@ -46,7 +46,8 @@ const post = ({ data }) => {
 
       <Helmet>
           <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
-      </Helmet>
+          <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
+       </Helmet>
 
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
@@ -55,8 +56,6 @@ const post = ({ data }) => {
       
         <FeaturedMedia image={featuredImage} />
             
-        <img src={featuredImage?.node?.mediaItemUrl} />
-
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
 
