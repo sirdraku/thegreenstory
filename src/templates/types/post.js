@@ -44,11 +44,15 @@ const post = ({ data }) => {
     >
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
+
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
-        
+        <Helmet>
+          <meta property="og:image" content={featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src}></meta>
+      </Helmet>
+
         <FeaturedMedia image={featuredImage} />
             
         <header className="entry-header header-footer-group">
