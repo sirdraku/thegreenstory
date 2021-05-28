@@ -44,18 +44,18 @@ const post = ({ data }) => {
     >
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
+      <Helmet>
+          <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
+      </Helmet>
 
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
-        <Helmet>
-          <meta property="og:image" content={featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src} />
-      </Helmet>
-
+      
         <FeaturedMedia image={featuredImage} />
             
-        <img src={featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src} />
+        <img src={featuredImage?.node?.mediaItemUrl} />
 
         <header className="entry-header header-footer-group">
           <div className="entry-header-content">
@@ -70,9 +70,6 @@ const post = ({ data }) => {
 
              <div className="s9-widget-wrapper"></div>
 
-            <Helmet>
-              <meta content="" />
-            </Helmet>
             <div
               className="intro-text section-inner max-percentage small"
               dangerouslySetInnerHTML={{ __html: excerpt }}

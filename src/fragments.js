@@ -58,6 +58,7 @@ export const fragments = graphql`
     excerpt
     featuredImage {
       node {
+        mediaItemUrl
         altText
         localFile {
           ...HeroImage
