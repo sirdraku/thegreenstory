@@ -45,9 +45,10 @@ const post = ({ data }) => {
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
       <Helmet>
+          <link rel="canonical" href={uri} />
           <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
           <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
-          <link rel="canonical" href={uri} />
+         
        </Helmet>
 
       <article
