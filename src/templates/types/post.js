@@ -47,6 +47,7 @@ const post = ({ data }) => {
       <Helmet>
           <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
           <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
+          <link rel="canonical" href={uri} />
        </Helmet>
 
       <article
