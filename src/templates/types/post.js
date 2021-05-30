@@ -38,6 +38,7 @@ const post = ({ data }) => {
   let makeExerptArr = clearExerpt.split(" ");
   let addExerptSuffix = [...makeExerptArr, "..."];
 
+  
   return (
     <Layout
     bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
