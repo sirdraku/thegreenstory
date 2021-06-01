@@ -1,3 +1,6 @@
+[functions]
+  directory = "redirect"
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
