@@ -1,8 +1,11 @@
 exports.handler = async event => {
+  if (event.queryStringParameters.fbclid) {
     return {
       statusCode: 301,
       headers: {
-        location: decodeURIComponent(event.queryStringParameters.url.replace(/\+/g, '%20'))
+        'cache-control': 'public, max-age=0, must-revalidate',
+        location: 'https://www.cuteanimalplanet.com/senior-dog-that-lost-sight-due-to-glaucoma-got-puppy-seeing-eye-dog/'
       }
     }
+  }
 }
