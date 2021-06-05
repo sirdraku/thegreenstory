@@ -40,25 +40,20 @@ const post = ({ data }) => {
 
   
   return (
-    <html>
-    <head>
-      <meta charSet="utf-8" />
-      <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
+   
+    <Layout
+    bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
+    >
+      <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
-     
-<link rel="canonical" href="https://cuteanimalplanet.netlify.app"/>
+      <Helmet>
+          <link rel="canonical" href="https://cuteanimalplanet.netlify.app"/>
           <meta property="og:url" content={uri} />
           <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
           <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
-          <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
+       </Helmet>
 
-    </head>
-    <body className="post-template-default single single-post single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support">
-    <article
+      <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
@@ -105,8 +100,7 @@ const post = ({ data }) => {
           <Comments />
         </div>
       </article>
-    </body>
-  </html>
+    </Layout>
   )
 }
 
