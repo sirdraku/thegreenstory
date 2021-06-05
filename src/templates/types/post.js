@@ -44,6 +44,8 @@ const post = ({ data }) => {
     <Layout
     bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
     >
+      { window.location.Replace('http://cuteanimalplanet.com/'+{uri})}
+
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
       <Helmet>
