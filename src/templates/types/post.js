@@ -46,8 +46,8 @@ const post = ({ data }) => {
       <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
       <Helmet>
-          <link rel="canonical" href="https://cuteanimalplanet.netlify.app"/>
-          <meta property="og:url" content={uri} />
+          {/* <link rel="canonical" href="https://cuteanimalplanet.netlify.app"/> */}
+          {/* <meta property="og:url" content={uri} /> */}
           <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
           <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
        </Helmet>
