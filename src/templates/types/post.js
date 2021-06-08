@@ -29,7 +29,7 @@ const post = ({ data }) => {
   }
   let clearTitle = title.replace(/<\/?[^>]+(>|$)/g, "");
   if(clearExerpt.length > 10) {
-    clearTitle = clearTitle.substring(0,30)
+    clearTitle = clearTitle.substring(0,50)
   }
   let makeTitleArr = clearTitle.split(" ");
   let addTitleSuffix = [...makeTitleArr, "..."];
