@@ -8,7 +8,7 @@ import AuthorBio from "../../components/AuthorBio"
 import PostMeta from "../../components/PostMeta"
 import PostCategories from "../../components/PostCategories"
 import FeaturedMedia from "../../components/FeaturedMedia"
-import { Helmet } from "react-helmet"
+import Helmet from "react-helmet"
 
 const post = ({ data }) => {
   const { nextPage, previousPage, page } = data
@@ -38,75 +38,66 @@ const post = ({ data }) => {
   let makeExerptArr = clearExerpt.split(" ");
   let addExerptSuffix = [...makeExerptArr, "..."];
 
-  
   return (
-    <html>
-    <head>
-      <meta charSet="utf-8" />
-      <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-
-     
-<link rel="canonical" href="https://cuteanimalplanet.netlify.app"/>
-          <meta property="og:url" content={uri} />
-          <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
-          <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
+    <>
+      <Helmet>
+        <link rel="canonical" href="https://cuteanimalplanet.netlify.app"/>
+        <meta property="og:url" content={uri} />
+        <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
+        <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
+      </Helmet>
+      <Layout bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}>
           <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
-    </head>
-    <body className="post-template-default single single-post single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support">
-    <article
-        className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
-        id={`post-${databaseId}`}
-      >
-      
-        <FeaturedMedia image={featuredImage} />
-            
-        <header className="entry-header header-footer-group">
-          <div className="entry-header-content">
-
-            <PostCategories categories={categories} />
-
-            <h1
-              className="entry-title"
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
-             <PostMeta title={title} author={author} date={date} />
-
-             <div className="s9-widget-wrapper"></div>
-
-            <div
-              className="intro-text section-inner max-percentage small"
-              dangerouslySetInnerHTML={{ __html: excerpt }}
-            />
-           
-          </div>
-        </header>
-     
-
-        <div className="post-inner thin">
-          <div
-            className="entry-content"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
-        </div>
+          <article
+          className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
+          id={`post-${databaseId}`}
+        >
         
-        <div className="section-inner">
-          <AuthorBio author={author} />
-          <div className="s9-widget-wrapper"></div>
-          <ContentTypePagination
-            previousPage={previousPage}
-            nextPage={nextPage}
-            contentType={"Post"}
-          />
-          <Comments />
-        </div>
-      </article>
-    </body>
-  </html>
+          <FeaturedMedia image={featuredImage} />
+              
+          <header className="entry-header header-footer-group">
+            <div className="entry-header-content">
+
+              <PostCategories categories={categories} />
+
+              <h1
+                className="entry-title"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+              <PostMeta title={title} author={author} date={date} />
+
+              <div className="s9-widget-wrapper"></div>
+
+              <div
+                className="intro-text section-inner max-percentage small"
+                dangerouslySetInnerHTML={{ __html: excerpt }}
+              />
+            
+            </div>
+          </header>
+      
+
+          <div className="post-inner thin">
+            <div
+              className="entry-content"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </div>
+          
+          <div className="section-inner">
+            <AuthorBio author={author} />
+            <div className="s9-widget-wrapper"></div>
+            <ContentTypePagination
+              previousPage={previousPage}
+              nextPage={nextPage}
+              contentType={"Post"}
+            />
+            <Comments />
+          </div>
+        </article>
+      </Layout>
+    </>
   )
 }
 

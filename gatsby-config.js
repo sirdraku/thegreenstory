@@ -36,7 +36,7 @@ module.exports = {
           },
         },
         // url: process.env.WPGRAPHQL_URL,
-        url: `https://www.cuteanimalplanet.com/graphql`,
+        url: `http://themeplugs.com/plugin/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: false,
