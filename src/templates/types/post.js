@@ -40,17 +40,20 @@ const post = ({ data }) => {
 
   return (
     <>
+   
+      <Layout bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}>
+
       <Helmet>
         <link rel="canonical" href="https://cuteanimalplanet.netlify.app"/>
         <meta property="og:url" content={uri} />
         <meta property="og:image" content={featuredImage?.node?.mediaItemUrl} />
         <link rel="image_src" href={featuredImage?.node?.mediaItemUrl} />
+        <meta property="og:title" content={addTitleSuffix.join(" ")} />
       </Helmet>
-      <Layout bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}>
-          <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
 
-          <article
-          className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
+      <Seo title={addTitleSuffix.join(" ")} description={addExerptSuffix.join(" ")} />
+
+        <article className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
           id={`post-${databaseId}`}
         >
         
