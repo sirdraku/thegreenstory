@@ -1,4 +1,4 @@
 # http and https need separate rules if you don’t force_ssl!
-https://focused-sammet-9fa86a.netlify.app/* https://www.amanuntul.ro/:splat 301!
-https://focused-sammet-9fa86a.netlify.app/* http://amanuntul.ro/:splat 301!
-https://focused-sammet-9fa86a.netlify.app/* amanuntul.ro/:splat 301!
+https://focused-sammet-9fa86a.netlify.app/* https://www.bacau.net/:splat 301!
+https://focused-sammet-9fa86a.netlify.app/* http://bacau.net/:splat 301!
+https://focused-sammet-9fa86a.netlify.app/* bacau.net/:splat 301!
