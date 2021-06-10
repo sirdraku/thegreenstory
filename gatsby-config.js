@@ -36,7 +36,7 @@ module.exports = {
           },
         },
         // url: process.env.WPGRAPHQL_URL,
-        url: `https://web.amanuntul.ro/graphql`,
+        url: `https://www.majesticanimals.net/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: false,
